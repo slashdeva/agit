@@ -1,0 +1,59 @@
+extends layout  
+
+block fullpage
+  link(rel='stylesheet' href='/bower_components/fullpage/jquery.fullPage.css')
+  script(src='/bower_components/fullpage/jquery.fullPage.js')
+  script(src='/bower_components/fullpage/jquery.fullPage.min.js')
+  script(src='/bower_components/fullpage/vendors/jquery.slimscroll.min.js')
+
+block header
+  link(rel='stylesheet', href='/css/index.css')
+  include ./includes/head.jade
+
+block content
+  script(type='text/javascript').
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        'verticalCentered': true,
+        navigation: true
+      });
+    });
+    
+  #infoMenu
+      
+  #fullpage
+    .section#section1
+      .intro
+        .row
+          .large-6.columns
+            h1 Gnuvill <sup>in web</sup>
+            h2 hello2
+     .section#section2
+      .intro
+        .row
+          .large-6.right.columns
+            h1 page2
+            h2 hello2
+
+    .section#section3
+      .intro
+        .row
+          .large-6.right.columns
+            h1 page3
+            h2 hello3
+
+    .section#section4
+      .intro
+        .row
+          .large-6.columns
+            h1 page4
+            h2 hello4
+    .section#section5
+      .intro
+        .row
+          .large-6.right.columns
+            h1 page5
+            h2 hello5
+            
+block footer
+  include ./includes/foot.jade

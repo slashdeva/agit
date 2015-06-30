@@ -1,0 +1,27 @@
+{
+  "name": "agit",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/Gnuvill2ndGen/agit",
+  "authors": [
+    "helloziki <hoonycho12@gmail.com>"
+  ],
+  "description": "This is secret gnuvill web agit",
+  "main": "app.js",
+  "keywords": [
+    "gnuvill",
+    "agit"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "foundation": "~5.5.2"
+  }
+}

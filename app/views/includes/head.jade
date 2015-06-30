@@ -1,0 +1,123 @@
+block header
+  .sticky.fixed
+    nav.top-bar(
+      data-topbar
+      role='navigation' 
+      data-options='sticky_on: large'
+    )
+      ul.title-area
+        li.name
+          h1
+            a(href="/") Gnuvill
+        li.toggle-topbar.menu-icon
+          a(href='#')
+            span Menu
+
+      section.top-bar-section
+        ul.right
+          li.has-form
+            a(href='#', data-reveal-id='loginModal') login
+            
+  #loginModal.reveal-modal(data-reveal, aria-labelledby='Login Dialog', aria-hidden='true', role='dialog')
+    .row
+      .small-12.large-6.columns
+        h2#loginModalTitle Login
+    .row
+      .large-7.columns
+        img(src='/img/outer/login/welcome.jpg')
+      .large-5.columns
+        form
+          fieldset
+            legend Login Forms
+            .row
+              .small-3.columns
+                label E-mail
+              .small-9.columns
+                input#right-label(type='text', placeholder='Type your Email')
+            .row
+              .small-3.columns
+                label password
+              .small-9.columns
+                input#right-label(type='password')
+            .row
+              .large-6.columns
+                a.button.success.expand(href='#', data-reveal-id='SignUpModal') Sign Up
+              .large-6.column
+                a.button.secondary.expand(href='#', aria-label='submit form' role='button') Login
+                  
+    a.close-reveal-modal(aria-label='Close') &#215
+  #SignUpModal.reveal-modal(data-reveal, aria-labelledby='Sign Up Dialog', aria-hidden='true', role='dialog')
+    a.close-reveal-modal(aria-label='Close') &#215
+    .row
+      .large-6.columns
+        h2#SignUpModalTitle Sign Up
+    .row
+      .large-6.large-centered.columns
+        ul.small-block-grid-1
+          li
+
+    .row
+      .large-12.columns
+        form
+          fieldset
+            legend Sign Up
+            .row
+              .small-10.large-10.large-centered.columns
+                h1 회원 가입 절차 이미지 넣을 공간.
+            .row
+              .large-4.columns
+                img.logo(src='/img/outer/join/logo.png')
+              .large-8.columns
+                .row
+                  .small-2.large-2.columns
+                    label Email
+                  .small-10.large-10.columns
+                    .row.collapse.prefix-radius
+                      .small-10.columns
+                        input#email_form(type='email', placeholder='Type your Email')
+                      .small-2.columns
+                        span.postfix 중복
+                .row
+                  .small-2.large-2.columns
+                    label password
+                  .small-10.large-10.columns
+                    input#password_form(type='password', placeholder='Type your password')
+                .row
+                  .small-2.large-2.columns
+                    label one-more password
+                  .small-10.large-10.columns
+                    input#re_password_form(type='password', placeholder='Retype your password')
+                .row
+                  .small-2.large-2.columns
+                    label 이름
+                  .small-10.large-10.columns
+                    input#name_form(type='text', placeholder='Type your name')
+                .row
+                  .small-2.large-2.columns
+                    label 생년월일
+                  .small-10.large-10.columns
+                    input#birth_form(type='text', placeholder='Type your birthday')
+                .row
+                  .small-2.large-2.columns
+                    label 학과
+                  .small-10.large-10.columns
+                    input#major_form(type='text', placeholder='Type your major')
+                .row
+                  .small-2.large-2.columns
+                    label phone
+                  .small-10.large-10.columns
+                    input#phone_form(type='text', placeholder='Type your phone number')
+                .row
+                  .small-7.large-5.columns
+                    label 매우 중요) 이성친구 유무
+                  .large-3.columns
+                    .small-5.large-4.columns
+                    input#hasloverno(type='radio', name='haslover', value='yes')
+                    label(for='hasloveryes') yes
+                    input#hasloveryes(type='radio', name='haslover', value='no')
+                    label(for='hasloverno') no
+                .row
+                  .small-6.columns
+                    a.button.success.expand(href='#', aria-label='submit form' role='button') Join
+                  .small-6.columns
+                    a.button.secondary.expand(href='#', type='reset') Cancel        
